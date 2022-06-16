@@ -1,0 +1,8 @@
+first install Ubuntu
+and run the following command:
+
+sudo apt install git
+git clone https://github.com/Dashium/Convert-to-Dashium
+cd Convert-to-Dashium
+sudo chmod +x setup.sh
+sudo bash ./setup.sh
