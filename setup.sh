@@ -18,5 +18,15 @@ curl -sL https://deb.nodesource.com/setup_13.x | sudo -E bash -
 sudo apt-get install nodejs
 
 
+git clone https://github.com/Dashium/Dashium
+cd Dashium
+npm install
+
+
+git clone https://github.com/Dashium/DashiumInstaller
+bash /DashiumInstaller/setup/installALL.sh
+
+
+
 sudo apt autoremove
 sudo reboot
