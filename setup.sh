@@ -6,8 +6,6 @@ feh --bg-scale $PWD/background.png
 
 
 
-sudo apt-get remove ubuntu-gnome-desktop
-sudo apt-get remove gnome-shell 
 
 sudo apt autoremove
 
