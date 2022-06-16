@@ -1,12 +1,22 @@
-sudo apt install openbox
+#!/bin/bash
+
+git pull
+
+sudo apt update
+sudo apt upgrade
+
+
 sudo apt install git
+sudo apt install openbox
 sudo apt install feh
 
 feh --bg-scale $PWD/background.png
 
 
+sudo apt-get install curl
+curl -sL https://deb.nodesource.com/setup_13.x | sudo -E bash -
+sudo apt-get install nodejs
 
 
 sudo apt autoremove
-
 sudo reboot
