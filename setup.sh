@@ -10,3 +10,5 @@ sudo apt-get remove ubuntu-gnome-desktop
 sudo apt-get remove gnome-shell 
 
 sudo apt autoremove
+
+sudo reboot
