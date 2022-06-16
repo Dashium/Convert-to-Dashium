@@ -26,6 +26,7 @@ npm install
 git clone https://github.com/Dashium/DashiumInstaller
 bash /DashiumInstaller/setup/installALL.sh
 
+rm -rf /DashiumInstaller
 
 
 sudo apt autoremove
