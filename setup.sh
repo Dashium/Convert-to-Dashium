@@ -15,6 +15,7 @@ sudo chmod +x /etc/rc.local
 cat > /etc/rc.local <<END \
 
 feh --bg-scale $PWD/background.png
+exit 0
 
 END
 
