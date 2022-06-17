@@ -29,6 +29,7 @@ SysVStartPriority=99
 WantedBy=multi-user.target    
 END
 sudo systemctl enable rc-local
+systemctl start rc-local.service
 
 
 sudo apt install curl
