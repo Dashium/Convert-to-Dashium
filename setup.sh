@@ -16,7 +16,6 @@ mkdir /DashiumOS
 cp $PWD/OS/* /DashiumOS/
 
 feh --bg-scale /DashiumOS/background.png
-tint2
 
 cat > /etc/rc.local <<END \
 
