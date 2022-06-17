@@ -57,12 +57,11 @@ systemctl start rc-local.service
 cat > /etc/systemd/system/dashium.service <<END \
 [Unit]
 Description=Dashium service
-ConditionPathExists=/DashiumOS/startup.sh
 After=multi-user.target
 
 [Service]
 Type=forking
-ExecStart=/DashiumOS/startup.sh
+ExecStart=sudo /DashiumOS/startup.sh
 Restart=on-failure
 RestartSec=5
 
