@@ -10,6 +10,9 @@ sudo apt install git
 sudo apt install openbox
 sudo apt install feh
 sudo apt install openssh 
+sudo apt install net-tools
+
+sed -i "feh --bg-scale $PWD/background.png\n" ~/.config/openbox/autostart
 
 feh --bg-scale $PWD/background.png
 
