@@ -11,9 +11,12 @@ sudo apt install feh
 sudo apt install openssh 
 sudo apt install net-tools
 
+mkdir /DashiumOS
+cp $PWD/background.png /DashiumOS/background.png
+
 cat > /etc/rc.local <<END \
 
-feh --bg-scale $PWD/background.png
+feh --bg-scale /DashiumOS/background.png
 exit 0
 
 END
