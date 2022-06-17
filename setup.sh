@@ -18,6 +18,17 @@ feh --bg-scale $PWD/background.png
 
 END
 
+cat > /etc/systemd/system/rc-local.service <<END \
+ExecStart=/etc/rc.local start
+TimeoutSec=0
+StandardOutput=tty
+RemainAfterExit=yes
+SysVStartPriority=99
+
+[Install]
+WantedBy=multi-user.target    
+END
+
 
 
 sudo apt install curl
