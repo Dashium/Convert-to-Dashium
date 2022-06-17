@@ -22,7 +22,7 @@ cp $PWD/OS/* /DashiumOS/
 
 feh --bg-scale /DashiumOS/background.png
 
-cat > /etc/rc.local <<END \
+cat > /etc/rc.local <<EOF
 #!/bin/sh
 
 feh --bg-scale /DashiumOS/background.png
@@ -30,10 +30,10 @@ tint2
 
 exit 0
 
-END
+EOF
 sudo chmod +x /etc/rc.local
 
-cat > /etc/systemd/system/rc-local.service <<END \
+cat > /etc/systemd/system/rc-local.service <<EOF
 [Unit]
 Description=/etc/rc.local compatibility service
 ConditionPathExists=/etc/rc.local
@@ -49,12 +49,12 @@ SysVStartPriority=99
 
 [Install]
 WantedBy=multi-user.target    
-END
+EOF
 sudo systemctl enable rc-local
 systemctl start rc-local.service
 
 
-cat > /etc/systemd/system/dashium.service <<END \
+cat > /etc/systemd/system/dashium.service <<EOF
 [Unit]
 Description=Dashium service
 After=multi-user.target
@@ -70,7 +70,7 @@ RestartSec=5
 
 [Install]
 WantedBy=multi-user.target
-END
+EOF
 chmod u+x /DashiumOS/*
 sudo systemctl start dashium
 sudo systemctl enable dashium
