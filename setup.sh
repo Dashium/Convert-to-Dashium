@@ -54,6 +54,21 @@ chmod u+x /etc/systemd/system/rc-local.service
 sudo systemctl start rc-local
 sudo systemctl enable rc-local
 
+cat > /etc/systemd/system/dashiumDesktop.service <<EOF
+[Unit]
+Description=Dashium Desktop service
+After=multi-user.target
+
+[Service]
+Type=forking
+ExecStart=/DashiumOS/desktop.sh
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
+EOF
+
 cat > /etc/systemd/system/dashium.service <<EOF
 [Unit]
 Description=Dashium service
@@ -74,6 +89,8 @@ EOF
 chmod u+x /DashiumOS/*
 sudo systemctl start dashium
 sudo systemctl enable dashium
+sudo systemctl start dashiumDesktop
+sudo systemctl enable dashiumDesktop
 
 sudo apt autoremove
 sudo reboot
