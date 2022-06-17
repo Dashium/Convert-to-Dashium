@@ -5,16 +5,19 @@ git pull
 sudo apt update
 sudo apt upgrade
 
-
 sudo apt install git
 sudo apt install openbox
 sudo apt install feh
 sudo apt install openssh 
 sudo apt install net-tools
 
-sed -i "feh --bg-scale $PWD/background.png\n" ~/.config/openbox/autostart
+sudo chmod +x /etc/rc.local
+cat > /etc/rc.local <<END \
 
 feh --bg-scale $PWD/background.png
+
+END
+
 
 
 sudo apt install curl
