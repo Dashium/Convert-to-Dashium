@@ -61,7 +61,7 @@ After=multi-user.target
 
 [Service]
 Type=forking
-ExecStart=sudo /DashiumOS/startup.sh
+ExecStart=/DashiumOS/startup.sh
 Restart=on-failure
 RestartSec=5
 
