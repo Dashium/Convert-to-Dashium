@@ -23,9 +23,11 @@ cp $PWD/OS/* /DashiumOS/
 feh --bg-scale /DashiumOS/background.png
 
 cat > /etc/rc.local <<END \
+#!/bin/sh
 
 feh --bg-scale /DashiumOS/background.png
 tint2
+
 exit 0
 
 END
