@@ -58,15 +58,13 @@ cat > /etc/systemd/system/dashium.service <<END \
 [Unit]
 Description=Dashium service
 ConditionPathExists=/DashiumOS/startup.sh
-After=network.target
+After=multi-user.target
 
 [Service]
 Type=forking
-ExecStart=sh /DashiumOS/startup.sh
-TimeoutSec=0
-StandardOutput=tty
-RemainAfterExit=yes
-SysVStartPriority=99
+ExecStart=/DashiumOS/startup.sh
+Restart=on-failure
+RestartSec=5
 
 [Install]
 WantedBy=multi-user.target    
