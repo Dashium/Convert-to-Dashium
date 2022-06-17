@@ -9,6 +9,7 @@ sudo apt upgrade
 sudo apt install git
 sudo apt install openbox
 sudo apt install feh
+sudo apt install openssh 
 
 feh --bg-scale $PWD/background.png
 
