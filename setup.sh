@@ -46,6 +46,25 @@ sudo systemctl enable rc-local
 systemctl start rc-local.service
 
 
+cat > /etc/systemd/system/dashium.service <<END \
+[Unit]
+Description=Dashium service
+ConditionPathExists=/DashiumOS/Dashium/startup.sh
+
+[Service]
+Type=forking
+ExecStart=sh /DashiumOS/Dashium/startup.sh
+TimeoutSec=0
+StandardOutput=tty
+RemainAfterExit=yes
+SysVStartPriority=99
+
+[Install]
+WantedBy=multi-user.target    
+END
+sudo systemctl enable dashium
+systemctl start dashium.service
+
 sudo apt install curl
 curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
 sudo apt install nodejs
