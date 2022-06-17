@@ -50,9 +50,9 @@ SysVStartPriority=99
 [Install]
 WantedBy=multi-user.target    
 EOF
+chmod u+x /etc/systemd/system/rc-local.service
+sudo systemctl start rc-local
 sudo systemctl enable rc-local
-systemctl start rc-local.service
-
 
 cat > /etc/systemd/system/dashium.service <<EOF
 [Unit]
