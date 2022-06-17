@@ -13,9 +13,9 @@ sudo apt install feh
 feh --bg-scale $PWD/background.png
 
 
-sudo apt-get install curl
+sudo apt install curl
 curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
-sudo apt-get install nodejs
+sudo apt install nodejs
 
 
 git clone https://github.com/Dashium/Dashium
