@@ -14,6 +14,8 @@ sudo apt install net-tools
 mkdir /DashiumOS
 cp $PWD/background.png /DashiumOS/background.png
 
+feh --bg-scale /DashiumOS/background.png
+
 cat > /etc/rc.local <<END \
 
 feh --bg-scale /DashiumOS/background.png
