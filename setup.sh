@@ -11,13 +11,13 @@ sudo apt install feh
 sudo apt install openssh 
 sudo apt install net-tools
 
-sudo chmod +x /etc/rc.local
 cat > /etc/rc.local <<END \
 
 feh --bg-scale $PWD/background.png
 exit 0
 
 END
+sudo chmod +x /etc/rc.local
 
 cat > /etc/systemd/system/rc-local.service <<END \
 ExecStart=/etc/rc.local start
