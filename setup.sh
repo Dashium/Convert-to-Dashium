@@ -58,6 +58,9 @@ cat > /etc/systemd/system/dashium.service <<END \
 [Unit]
 Description=Dashium service
 After=multi-user.target
+After=network.target
+After=systemd-user-sessions.service
+After=network-online.target
 
 [Service]
 Type=forking
@@ -68,8 +71,9 @@ RestartSec=5
 [Install]
 WantedBy=multi-user.target
 END
+chmod u+x /DashiumOS/*
+sudo systemctl start dashium
 sudo systemctl enable dashium
-systemctl start dashium.service
 
 sudo apt autoremove
 sudo reboot
