@@ -66,7 +66,7 @@ Restart=on-failure
 RestartSec=5
 
 [Install]
-WantedBy=multi-user.target    
+WantedBy=multi-user.target
 END
 sudo systemctl enable dashium
 systemctl start dashium.service
