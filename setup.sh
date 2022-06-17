@@ -12,6 +12,11 @@ sudo apt install openssh
 sudo apt install net-tools
 sudo apt install tint2
 
+sudo apt install curl
+curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
+sudo apt install nodejs
+
+
 mkdir /DashiumOS
 cp $PWD/OS/* /DashiumOS/
 
@@ -64,22 +69,6 @@ WantedBy=multi-user.target
 END
 sudo systemctl enable dashium
 systemctl start dashium.service
-
-sudo apt install curl
-curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
-sudo apt install nodejs
-
-
-git clone https://github.com/Dashium/Dashium
-cd Dashium
-npm install
-
-
-git clone https://github.com/Dashium/DashiumInstaller
-bash /DashiumInstaller/setup/installALL.sh
-
-rm -rf /DashiumInstaller
-
 
 sudo apt autoremove
 sudo reboot
