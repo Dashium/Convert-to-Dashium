@@ -35,6 +35,7 @@ cat > /etc/systemd/system/rc-local.service <<END \
 [Unit]
 Description=/etc/rc.local compatibility service
 ConditionPathExists=/etc/rc.local
+After=network.target
 
 [Service]
 Type=forking
@@ -54,11 +55,12 @@ systemctl start rc-local.service
 cat > /etc/systemd/system/dashium.service <<END \
 [Unit]
 Description=Dashium service
-ConditionPathExists=/DashiumOS/Dashium/startup.sh
+ConditionPathExists=/DashiumOS/startup.sh
+After=network.target
 
 [Service]
 Type=forking
-ExecStart=sh /DashiumOS/Dashium/startup.sh
+ExecStart=sh /DashiumOS/startup.sh
 TimeoutSec=0
 StandardOutput=tty
 RemainAfterExit=yes
