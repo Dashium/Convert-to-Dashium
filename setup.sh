@@ -86,7 +86,9 @@ RestartSec=5
 [Install]
 WantedBy=multi-user.target
 EOF
+
 chmod u+x /DashiumOS/*
+
 sudo systemctl start dashium
 sudo systemctl enable dashium
 sudo systemctl start dashiumDesktop
