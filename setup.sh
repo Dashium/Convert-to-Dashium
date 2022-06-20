@@ -16,6 +16,8 @@ sudo apt install openbox
 sudo apt install feh
 sudo apt install openssh
 sudo apt install openssh-server
+sudo systemctl enable ssh
+sudo systemctl start ssh
 sudo apt install net-tools
 sudo apt install tint2
 
