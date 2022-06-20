@@ -84,7 +84,7 @@ fi
 
 if [ "$color_prompt" = yes ]; then
     # PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
-    PS1="\[$(tput bold)\]\[\033[38;5;27m\]DashiumOS\[$(tput sgr0)\] \[$(tput sgr0)\]\[\033[38;5;13m\]\u\[$(tput sgr0)\]@\[$(tput sgr0)\]\[\033[38;5;2m\]\w\[$(tput sgr0)\] > \[$(tput sgr0)\]"
+    PS1='\[\e[0;1;96m\]DashiumOS \[\e[0;95m\]\u\[\e[0m\]@\[\e[0;92m\]\w\[\e[0m\] > \[\e[0m\]'
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
