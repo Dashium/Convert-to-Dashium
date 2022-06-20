@@ -63,9 +63,6 @@ fi
 
 PS1='\[\e[1;36m\]DashiumOS \[\e[1;36m\]\u \[\e[0m\]@ \[\e[1;36m\]\W \[\e[0m\] > '
 
-// Color Cyan prompt
-PS1='\[\e[1;36m\]\u \[\e[0m\]@ \[\e[1;36m\]\W \[\e[0m\] > '
-
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
