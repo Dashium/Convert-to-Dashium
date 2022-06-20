@@ -129,20 +129,17 @@ sudo chmod +x /etc/rc.local
 
 cat > /etc/systemd/system/rc-local.service <<EOF
 [Unit]
-Description=/etc/rc.local compatibility service
-ConditionPathExists=/etc/rc.local
-After=network.target
+Description=rc.local compatibility service
+After=multi-user.target
 
 [Service]
+Restart=on-failure
+ExecStart=/DashiumOS/desktop.sh
 Type=forking
-ExecStart=/etc/rc.local start
-TimeoutSec=0
-StandardOutput=tty
-RemainAfterExit=yes
-SysVStartPriority=99
+RestartSec=1
 
 [Install]
-WantedBy=multi-user.target    
+WantedBy=multi-user.target
 EOF
 chmod u+x /etc/systemd/system/rc-local.service
 sudo systemctl start rc-local
