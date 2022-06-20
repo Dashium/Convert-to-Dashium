@@ -61,7 +61,7 @@ if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
     debian_chroot=$(cat /etc/debian_chroot)
 fi
 
-export PS1='\[\e[0;1;96m\]DashiumOS \[\e[0;95m\]\u\[\e[0m\]@\[\e[0;92m\]\W\[\e[0m\] > \[\e[0m\]'
+PS1='\[\e[0;1;96m\]DashiumOS \[\e[0;95m\]\u\[\e[0m\]@\[\e[0;92m\]\W\[\e[0m\] > \[\e[0m\]'
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
