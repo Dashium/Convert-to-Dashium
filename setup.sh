@@ -14,7 +14,8 @@ sudo apt upgrade
 sudo apt install git
 sudo apt install openbox
 sudo apt install feh
-sudo apt install openssh 
+sudo apt install openssh
+sudo apt install openssh-server
 sudo apt install net-tools
 sudo apt install tint2
 
