@@ -2,6 +2,12 @@
 
 git pull
 
+sudo apt remove thunderbird*
+sudo apt remove telegram*
+
+sudo apt remove printer*
+sudo apt remove ubuntu-desktop
+
 sudo apt update
 sudo apt upgrade
 
