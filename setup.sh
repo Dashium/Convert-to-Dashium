@@ -135,7 +135,7 @@ After=multi-user.target
 [Service]
 Restart=on-failure
 ExecStart=/DashiumOS/desktop.sh
-Type=forking
+Type=simple
 RestartSec=1
 
 [Install]
