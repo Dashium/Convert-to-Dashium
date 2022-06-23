@@ -129,6 +129,7 @@ EOF
 
 mkdir /DashiumOS
 cp $PWD/OS/* /DashiumOS/
+sudo chmod +x /DashiumOS/desktop.sh
 
 feh --bg-scale /DashiumOS/background.png
 
