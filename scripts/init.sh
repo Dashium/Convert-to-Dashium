@@ -1,3 +1,3 @@
-sh ./autorun.sh
-sh ./bash_setup.sh
-sh ./ftp.sh
+sh ./scripts/autorun.sh
+sh ./scripts/bash_setup.sh
+sh ./scripts/ftp.sh
