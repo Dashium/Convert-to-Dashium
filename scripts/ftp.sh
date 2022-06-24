@@ -1,6 +1,6 @@
 sudo apt install vsftpd
 
-cat > /etc/vsftpd.conf  <<EOF
+cat > /etc/vsftpd.conf <<EOF
 # Example config file /etc/vsftpd.conf
 #
 # The default compiled in settings are fairly paranoid. This sample file
