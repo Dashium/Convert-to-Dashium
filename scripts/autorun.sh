@@ -11,7 +11,10 @@ ExecStart=/bin/bash /DashiumOS/desktop.sh
 WantedBy=multi-user.target
 EOF
 
-chmod u+x /etc/systemd/system/rc-local.service
+cp /etc/systemd/system/rc-local.service /lib/systemd/system/rc-local.service
+sudo chmod 644 /etc/systemd/system/rc-local.service
+
+sudo chmod u+x /etc/systemd/system/rc-local.service
 sudo systemctl start rc-local
 sudo systemctl enable rc-local
 
@@ -28,6 +31,9 @@ ExecStart=/bin/bash /DashiumOS/desktop.sh
 WantedBy=multi-user.target
 EOF
 
-chmod u+x /etc/systemd/system/dashiumDesktop.service
+cp /etc/systemd/system/dashiumDesktop.service /lib/systemd/system/dashiumDesktop.service
+sudo chmod 644 /etc/systemd/system/dashiumDesktop.service
+
+sudo chmod u+x /etc/systemd/system/dashiumDesktop.service
 sudo systemctl start dashiumDesktop
 sudo systemctl enable dashiumDesktop
