@@ -55,4 +55,3 @@ sh ./scripts/init.sh
 chmod u+x /DashiumOS/*
 
 sudo apt autoremove
-sudo reboot
