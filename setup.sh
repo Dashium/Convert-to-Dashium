@@ -50,7 +50,7 @@ sudo chmod +x /DashiumOS/desktop.sh
 
 feh --bg-scale /DashiumOS/background.png
 
-bash /scripts/init.sh
+sh ./scripts/init.sh
 
 chmod u+x /DashiumOS/*
 
